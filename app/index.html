@@ -5,11 +5,47 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="./public/index.css">
+    <link rel="stylesheet" href="./public/index.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!--// GOOGLE FONTS //-->
   </head>
-  <body>
-    <div id="app"></div>
-    <h1 class="">Hello</h1>
+  <body class="px-3 bg-[#F55A5A] min-h-screen grid font-inter font-medium">
+    <!-- CONTAINER -->
+    <div class=" bg-white m-auto">
+      <!-- INPUTS -->
+      <form id="color-form" class="px-4 py-6 gap-x-3 flex items-center">
+        <input
+          type="color"
+          id="color-input"
+          class="ring ring-[#E5E5E5] w-[50px] h-9 shadow-formEl"
+        />
+        <select
+          id="scheme-input"
+          class="text-base py-2 px-3 ring-[1px] ring-[#D1D5DB] rounded-md max-w-[312px] shadow-formEl font-normal"
+        >
+          <option class="" value="monochrome">Monochrome</option>
+          <option class="" value="monochrome-dark">Monochrome Dark</option>
+          <option class="" value="monochrome-light">Monochrome Light</option>
+          <option class="" value="analogic">Analogic</option>
+          <option class="" value="analogic-complement">
+            Analogic Complement
+          </option>
+          <option class="" value="traid">Traid</option>
+          <option class="" value="quad">Quad</option>
+        </select>
+        <button class="text-[12px] ring-[1px] ring-[#D1D5DB] rounded-md p-3" type="submit">
+          Get color scheme
+        </button>
+      </form>
+      <!--// INPUTS //-->
+    </div>
+    <!--// CONTAINER //-->
     <script type="module" src="/main.js"></script>
   </body>
 </html>
