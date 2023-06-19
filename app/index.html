@@ -16,10 +16,10 @@
     <!--// GOOGLE FONTS //-->
   </head>
   <body
-    class="px-5 place-items-center bg-[#F55A5A] min-h-screen grid font-inter font-medium"
+    class="flex flex-col items-center justify-center bg-[#F55A5A] min-h-screen font-inter font-medium"
   >
     <!-- CONTAINER -->
-    <div id="container" class="bg-white">
+    <div id="container" class="bg-white sm:max-w-md md:max-w-xl max-w-sm mx-3 my-3">
       <!-- INPUTS -->
       <form
         id="color-form"
@@ -56,6 +56,10 @@
       <!--// OUTPUT //-->
     </div>
     <!--// CONTAINER //-->
+
+    <div class="hidden" id="copied-container">
+      <div id="copied" class="absolute p-2 rounded-md bg-black text-white font-extrabold bottom-10 left-0 w-full text-center">Copied!</div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

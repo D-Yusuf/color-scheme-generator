@@ -25,14 +25,28 @@ function renderColors(color, mode) {
       let colorHtml = ``;
       data.colors.forEach((color) => {
         colorHtml += `
-          <div class="h-[460px] w-[110px] cursor-pointer flex flex-col text-center" data-color="${color.hex.clean}">
-            <div id="${color.hex.clean}-btn" class="h-full" style="background-color: ${color.hex.value};"></div>
-            <h1 class="my-3">${color.hex.value}</h1>
+          <div class="h-[460px] w-[110px] cursor-pointer flex flex-col text-center">
+            <div data-color="${color.hex.value}" class="h-full" style="background-color: ${color.hex.value};"></div>
+            <button data-color="${color.hex.value}" class="my-3 border-l-2">${color.hex.value}</button>
           </div>
         `;
       });
       document.getElementById("color-container").innerHTML = colorHtml;
     });
 }
+
+document.addEventListener('click', (e)=>{
+  if(e.target.dataset.color){
+    const copiedContainer = document.getElementById('copied-container')
+    navigator.clipboard.writeText(e.target.dataset.color)
+    .then(() => {
+      
+      copiedContainer.classList.remove('hidden')
+      setTimeout( ()=>{
+        copiedContainer.classList.add('hidden')
+      } ,1000)
+    })
+  }
+})
 
 
