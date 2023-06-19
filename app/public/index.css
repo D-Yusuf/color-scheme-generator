@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    *{
+        transition: all 500ms;
+    }
+    .new-color-transition{
+        transition: all ease-in 500ms;
+    }
+}
