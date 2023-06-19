@@ -4,19 +4,17 @@ colorForm.addEventListener("submit", (e) => {
   const color = document.getElementById("color-input").value;
   const mode = document.getElementById("mode-input").value;
   document.body.style.backgroundColor = color;
-  renderColors(color, mode)
+  
+  // Get hex value of color but need to remove its '#'
+  renderColors(color.replace("#",""), mode);
 });
 
 function renderColors(color, mode) {
   fetch(
-    `https://www.thecolorapi.com/scheme?hex=${color.replace(
-      "#",
-      ""
-    )}&format=json&mode=${mode}&count=5`
+    `https://www.thecolorapi.com/scheme?hex=${color}&format=json&mode=${mode}&count=5`
   )
     .then((res) => res.json())
     .then((data) => {
-
       let colorHtml = ``;
       data.colors.forEach((color) => {
         colorHtml += `
@@ -27,13 +25,12 @@ function renderColors(color, mode) {
         `;
       });
       document.getElementById("color-container").innerHTML = colorHtml;
-
     });
 }
 
 // Render when refreshed
-window.onload = () =>{
+window.onload = () => {
   const color = document.getElementById("color-input").value;
   const mode = document.getElementById("mode-input").value;
-  renderColors(color, mode)
-}
+  renderColors(color.replace('#', ''), mode);
+};
