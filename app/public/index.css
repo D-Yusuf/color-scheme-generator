@@ -9,4 +9,9 @@
     .new-color-transition{
         transition: all ease-in 500ms;
     }
+    select option:checked {
+        @apply font-semibold;
+      }
+
+    
 }
