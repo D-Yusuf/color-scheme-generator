@@ -15,19 +15,24 @@
     />
     <!--// GOOGLE FONTS //-->
   </head>
-  <body class="px-3 bg-[#F55A5A] min-h-screen grid font-inter font-medium">
+  <body
+    class="px-5 place-items-center bg-[#F55A5A] min-h-screen grid font-inter font-medium"
+  >
     <!-- CONTAINER -->
-    <div class=" bg-white m-auto">
+    <div id="container" class="bg-white">
       <!-- INPUTS -->
-      <form id="color-form" class="px-4 py-6 gap-x-3 flex items-center">
+      <form
+        id="color-form"
+        class="shadow-form px-4 py-6 gap-x-3 flex items-center justify-between"
+      >
         <input
           type="color"
           id="color-input"
-          class="ring ring-[#E5E5E5] w-[50px] h-9 shadow-formEl"
+          class="ring ring-[#E5E5E5] min-w-[50px] h-9 shadow-formEl"
         />
         <select
           id="scheme-input"
-          class="text-base py-2 px-3 ring-[1px] ring-[#D1D5DB] rounded-md max-w-[312px] shadow-formEl font-normal"
+          class="text-base py-2 px-3 ring-[1px] ring-[#D1D5DB] rounded-md w-full shadow-formEl font-normal"
         >
           <option class="" value="monochrome">Monochrome</option>
           <option class="" value="monochrome-dark">Monochrome Dark</option>
@@ -39,11 +44,43 @@
           <option class="" value="traid">Traid</option>
           <option class="" value="quad">Quad</option>
         </select>
-        <button class="text-[12px] ring-[1px] ring-[#D1D5DB] rounded-md p-3" type="submit">
+        <button
+          class="min-w-max text-[12px] ring-[1px] ring-[#D1D5DB] rounded-md p-3"
+          type="submit"
+        >
           Get color scheme
         </button>
       </form>
       <!--// INPUTS //-->
+      <!-- OUTPUT -->
+      <div class="flex">
+        <!-- color -->
+        <div class="h-[460px] w-[110px] flex flex-col text-center">
+          <button class="h-full bg-red-50"></button>
+          <h1 class="my-3">#F3G65D</h1>
+        </div>
+        <!-- color -->
+        <div class="h-[460px] w-[110px] flex flex-col text-center">
+          <button class="h-full bg-red-50"></button>
+          <h1 class="my-3">#F3G65D</h1>
+        </div>
+        <!-- color -->
+        <div class="h-[460px] w-[110px] flex flex-col text-center">
+          <button class="h-full bg-red-50"></button>
+          <h1 class="my-3">#F3G65D</h1>
+        </div>
+        <!-- color -->
+        <div class="h-[460px] w-[110px] flex flex-col text-center">
+          <button class="h-full bg-red-50"></button>
+          <h1 class="my-3">#F3G65D</h1>
+        </div>
+        <!-- color -->
+        <div class="h-[460px] w-[110px] flex flex-col text-center">
+          <button class="h-full bg-red-50"></button>
+          <h1 class="my-3">#F3G65D</h1>
+        </div>
+      </div>
+      <!--// OUTPUT //-->
     </div>
     <!--// CONTAINER //-->
     <script type="module" src="/main.js"></script>
