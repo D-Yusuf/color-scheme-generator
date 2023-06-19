@@ -1,3 +1,10 @@
+// Render when refreshed
+window.onload = () => {
+  const color = document.getElementById("color-input").value;
+  const mode = document.getElementById("mode-input").value;
+  renderColors(color.replace('#', ''), mode);
+};
+
 const colorForm = document.getElementById("color-form");
 colorForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -28,9 +35,4 @@ function renderColors(color, mode) {
     });
 }
 
-// Render when refreshed
-window.onload = () => {
-  const color = document.getElementById("color-input").value;
-  const mode = document.getElementById("mode-input").value;
-  renderColors(color.replace('#', ''), mode);
-};
+
