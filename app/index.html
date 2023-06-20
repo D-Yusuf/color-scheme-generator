@@ -20,21 +20,21 @@
     class="flex flex-col items-center justify-center bg-[#F55A5A] min-h-screen font-inter font-medium"
   >
     <!-- CONTAINER -->
-    <div id="container" class="bg-white sm:max-w-md md:max-w-xl max-w-[315px] mx-3 my-3">
+    <div id="container" class="bg-white sm:max-w-md md:max-w-xl max-w-[300px] mx-3 my-3">
       <!-- INPUTS -->
       <form
         id="color-form"
-        class="shadow-form px-4 py-6 gap-x-3 flex items-center justify-between"
+        class="shadow-form sm:px-4 px-1 py-6 gap-x-3 flex items-center sm:justify-between justify-center"
       >
         <input
           type="color"
           id="color-input"
           value="#F55A5A"
-          class="ring ring-[#E5E5E5] min-w-[50px] h-9 shadow-formEl"
+          class="ring ring-[#E5E5E5] min-w-[50px] h-9  shadow-formEl"
         />
         <select
           id="mode-input"
-          class="text-base py-2 px-3  ring-[1px] ring-[#D1D5DB] rounded-md w-full shadow-formEl font-normal"
+          class="sm:text-base text-sm py-2 px-3  ring-[1px] ring-[#D1D5DB] rounded-md sm:w-full w-20 shadow-formEl font-normal"
         >
           <option value="monochrome">Monochrome</option>
           <option value="monochrome-dark">Monochrome Dark</option>
@@ -45,7 +45,7 @@
           <option value="quad">Quad</option>
         </select>
         <button
-          class="min-w-max text-[12px] ring-[1px] ring-[#D1D5DB] rounded-md p-3"
+          class="min-w-max text-[12px] ring-[1px] ring-[#D1D5DB] rounded-md sm:p-3 p-2"
           type="submit"
         >
           Get color scheme
