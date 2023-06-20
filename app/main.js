@@ -27,7 +27,7 @@ function renderColors(color, mode) {
         colorHtml += `
           <div class="h-[460px] w-[110px] cursor-pointer flex flex-col text-center">
             <div data-color="${color.hex.value}" class="h-full" style="background-color: ${color.hex.value};"></div>
-            <button data-color="${color.hex.value}" class="my-3 border-l-2">${color.hex.value}</button>
+            <button data-color="${color.hex.value}" class="sm:my-3 my-1 border-l-2">${color.hex.value}</button>
           </div>
         `;
       });
